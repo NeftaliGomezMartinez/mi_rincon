@@ -1,4 +1,4 @@
-/* Reseteo básico y tipografía general */
+/* Configuración base de la página */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #2b2b2b;
@@ -7,23 +7,21 @@ body {
     line-height: 1.7;
 }
 
-/* Reto 1: Limito el ancho de la caja principal a 850px para que no se estire 
-   demasiado en pantallas grandes, y pongo los márgenes laterales en auto 
-   para centrar todo el contenido perfectamente en el centro de la pantalla. */
+/* Limitamos el ancho del contenedor principal y centramos el contenido con márgenes automáticos */
 body {
     max-width: 850px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Estilo general por defecto para cualquier h1 (para que luego se note el reto 4) */
+/* Estilo general por defecto para las cabeceras h1 */
 h1 {
     color: #333333;
     font-size: 1.8rem;
 }
 
-/* Reto 2: Estilo exclusivo para el título principal usando su ID. 
-   Le doy un color azul mar y separación entre letras para que destaque bastante. */
+/* Estilo exclusivo para el título principal mediante su ID. 
+   Gana a la regla general del h1 por tener mayor especificidad. */
 #titulo-principal {
     color: #006699;
     letter-spacing: -0.5px;
@@ -31,20 +29,18 @@ h1 {
     padding-bottom: 10px;
 }
 
-/* Reto 4 (Explicación para el profesor / F12):
-   La regla de color y diseño de #titulo-principal gana frente a la regla general de 'h1' 
-   porque el selector de ID (#) tiene muchísima más especificidad que un selector de etiqueta. 
-   Si abres las herramientas de desarrollo (F12) y miras el elemento, verás que la propiedad 
-   de color del 'h1' general aparece tachada porque ha perdido la batalla de especificidad. */
+/* Nota de desarrollo (F12): La regla anterior de #titulo-principal se aplica 
+   frente al selector h1 porque la especificidad del ID es mayor. 
+   La regla del h1 general aparece tachada en el inspector de elementos. */
 
-/* Clase propia para la introducción */
+/* Estilo personalizado para el párrafo de introducción */
 .introduccion {
     font-size: 1.15rem;
     font-style: italic;
     color: #555555;
 }
 
-/* Estilos de la tabla */
+/* Estilos de la tabla de datos */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -62,9 +58,7 @@ th {
     background-color: #eaf2f8;
 }
 
-/* Reto 3: Hacemos que los enlaces reaccionen al pasar el ratón. 
-   Le quitamos el subrayado por defecto y hacemos que cambien a un tono coral 
-   con una transición suave al poner el cursor encima (hover). */
+/* Estilos de los hipervínculos y su comportamiento interactivo al pasar el ratón */
 a {
     color: #008080;
     text-decoration: none;
@@ -77,7 +71,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Ajustes para la imagen */
+/* Ajustes adaptativos para las imágenes */
 img {
     max-width: 100%;
     height: auto;
